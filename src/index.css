@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    background-color: crimson;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    font-size: x-large;
+    padding: 20px;
+    margin: 0px 20px;
+}
+/* Styles for screens with a max width of 700px */
+@media (max-width: 700px) {
+    nav {
+      justify-content: space-between;
+    }
+  
+    .menu-icon {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 20px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    nav ul li {
+      padding: 15px 0;
+      margin: 0;
+    }
+  }
+  @media (max-width: 550px) {
+    .menu-icon {
+      margin: 0;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+  /* Styles for screens with a min width of 701px */
+  @media (min-width: 701px) {
+    .menu-icon {
+      display: none;
+    }
+  }
+  
+
+
+
+
+#container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.container{
+    background-color: antiquewhite;
+    padding: 20px;
+    min-height: calc(100vh - 100px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: x-large;
+    font-family: serif;
+    font-weight: 700;
+}
+.container h1 span{
+    color: blueviolet;
+}
+.container button{
+    padding: 5px;
+    border: 2px solid blue;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+.container button:hover {
+    background-color: black;
+}
+.mainAbout{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+#about{
+    font-size: xx-large;
+    font-weight: 1000;
+}
+#about span{
+    color: blueviolet;
+}
+.mainAbout h2{
+    font-size: x-large;
+    font-weight: 700;
+}
+.mainAbout p{
+    font-size: larger;
+    font-weight: 500;
+}
+.products{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.addCart {
+    background-color: antiquewhite;
+    padding: 20px;
+    min-height: calc(100vh - 100px);
+    box-sizing: border-box;
+}
+
+.cartTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cartTable th, .cartTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.cartTable th {
+    background-color: #f4f4f4;
+}
+
+.cartItemImage {
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover;
+}
+
+.cartTotal {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cartActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cartActions button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: aqua;
+
+}
+
+.cartActions button:hover {
+    background-color: #ddd;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; 
+}
+
+.orderForm {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.formField {
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size:20px;
+}
+footer span{
+    color: cadetblue;
+    padding-left: 5px;
+}
+
+@media (max-width: 550px) {
+    nav {
+        justify-content: center; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
