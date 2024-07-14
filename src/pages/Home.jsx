@@ -24,6 +24,7 @@ const Home = () => {
         createUserWithEmailAndPassword(auth,email,password )
         .then((userCredentials)=>{
             const user = userCredentials.user
+            alert('Account Created')
             console.log(user);
         })
         .catch((error)=>{
